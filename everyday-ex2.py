@@ -172,18 +172,111 @@
 
 # # SOLUTION.
 
-days_overdue = int(input("\npleaseenter the days the book is overdue: "))
+# days_overdue = int(input("\npleaseenter the days the book is overdue: "))
 
-print(f"\nBreak down of overdue chargesare as follows;\nFirst 7 days late the fee is (7 * $0.50) + 10 processing fee.")
-print(f'\n8 - 14 days the charge is (7 * $0.50) + (7 *$1) + 10 processing fee.')
-print(f'\nAbove 14 days the charge is (7 * $0.50) + (7 + $1) + ((Days overdue - 14) * 2) + 10 processing fee\n.')
+# print(f"\nBreak down of overdue chargesare as follows;\nFirst 7 days late the fee is (7 * $0.50) + 10 processing fee.")
+# print(f'\n8 - 14 days the charge is (7 * $0.50) + (7 *$1) + 10 processing fee.')
+# print(f'\nAbove 14 days the charge is (7 * $0.50) + (7 + $1) + ((Days overdue - 14) * 2) + 10 processing fee\n.')
 
-if days_overdue == 7:
-    print(f"\nYour overdue book(s) fees is ${(7 * 0.50) + 10}\n")
-elif 8 >= days_overdue <= 14:
-    print(f"\nyour overdue books(s) fee is $S{(7 * 0.50) + (7 * 1) + 10}\n")
-elif days_overdue > 14:
-     print(f"\nyour overdue books(s) fee is ${(7 * 0.50) + (7 * 1) + ((days_overdue -14) * 2)+ 10}\n")
+# if days_overdue == 7:
+#     print(f"\nYour overdue book(s) fees is ${(7 * 0.50) + 10}\n")
+# elif 8 >= days_overdue <= 14:
+#     print(f"\nyour overdue books(s) fee is $S{(7 * 0.50) + (7 * 1) + 10}\n")
+# elif days_overdue > 14:
+#      print(f"\nyour overdue books(s) fee is ${(7 * 0.50) + (7 * 1) + ((days_overdue -14) * 2)+ 10}\n")
 
-    
+    ##                                                                END.
 
+#                             (Question 6:)
+# The school cafeteria wants to automate their lunch ordering system. 
+# During morning homeroom, students need to:
+# - Choose their main dish (pizza, burger, or salad)
+# - Pick two side items (fruit, vegetables, yogurt, or chips)
+# - Select a drink (water, juice, or milk)
+# The cafeteria has these rules:
+# - If a student picks salad, they get a free fruit
+# - Students can't pick chips twice as their sides
+# - Each student gets only one drink
+# Create a program that:
+# a) Takes a student's order
+# b) Validates their choices based on the rules
+# c) Shows their complete order at the end
+# d) Keeps track of how many of each item was ordered (for the kitchen)
+# Test your program with at least 3 different student orders.
+
+# SOLUTION.
+print("\nMANUE:")
+print("\nMAIN DISH;\n1. Pizza\n2.Burger\n3.Salad")
+print("\nDRINKS;\n1.Water\n2.Juice\n3.Milk.")
+print('\nSIDE ITEMS (Note: you have to pick two items from here);\n1.Fruit\n2.Vegetables\n3.Yogurt\n4.Chips')
+
+main_dish = int(input("\nPlease choose a main dish by typing a corresponding number from the main dish menue:  "))
+drinks = int(input("\nPlease choose your desired drink by typing a corresponding number from the drinks manue: "))
+
+while True:
+    side_item1 = int(input("\nPlease choose your first side item by typing a corresponding numbre from the side item manue: "))
+    if side_item1 == 3 and drinks == 1:
+        print("\nYou can only take one drink eigther a Yogurt or a drink from the drink menue")
+    elif side_item1 == 3 and drinks == 2:
+        print("\nYou can only take one drink eigther a Yogurt or a drink from the drink menue")
+    elif side_item1 == 3 and drinks == 3:
+        print("\nYou can only take one drink eigther a Yogurt or a drink from the drink menue")
+    else:
+        break        
+
+while True:
+    side_item2 = int(input("\nPlease choose your second side item by typing a corresponding numbre from the side item manue: "))
+    if side_item2 == 3 and drinks == 1:
+        print("\nYou can only take one drink eigther a Yogurt or a drink from the drink menue")
+    elif side_item2 == 3 and drinks == 2:
+        print("\nYou can only take one drink eigther a Yogurt or a drink from the drink menue")
+    elif side_item2 == 3 and drinks == 3:
+        print("\nYou can only take one drink eigther a Yogurt or a drink from the drink menue")
+    elif side_item1 == 4 and side_item2 == 4:
+        print("\nYou can not choose chips twice. Choose again, the two side items have to be different.")    
+    else:
+        break        
+
+print("\nPLEASE CONFIRM YOUR CORRESPONDING FOODS YOU ORDERED;")
+
+if main_dish == 1:
+    print("1.Pizza")
+elif main_dish == 2:
+    print("1.Burger")    
+elif main_dish == 3:
+    print("1.Salads")
+    print("(BONUS) A free Fruit")
+else:
+    print("\nplease choose a corresponding number from the main dish manue!")     
+
+if side_item1 == 1:
+    print("2.Fruit")
+elif side_item1 == 2:
+    print("2.Vegetables")
+elif side_item1== 3:
+    print("2.Yogurt")
+elif side_item1 == 4:
+    print("2.Chips")
+else:
+    print("\nplease choose a corresponding number from the side item manue!")      
+
+if side_item2 == 1:
+    print("3.Fruit")
+elif side_item2 == 2:
+    print("3.Vegetables")
+elif side_item2 == 3:
+    print("3.Yogurt")
+elif side_item2 == 4:
+    print("3.Chips") 
+else:
+    print("\nplease choose a corresponding number from the side item manue!")       
+
+if drinks == 1:
+    print("4.Water")   
+elif drinks == 2:
+    print("4.Juice")
+elif drinks == 3:
+    print("4.milk")
+else:
+    print("\nplease choose a corresponding number from the drinks manue!")
+print("\nTHANK YOU... NICE MEALS INNIT 😎\n")    
